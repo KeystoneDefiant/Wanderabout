@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
-import axios from 'axios';
 import Cookies from 'js-cookie';
+import courseData from '@/public/courses.json';
 
 export interface Course {
   id: string;
@@ -18,9 +18,8 @@ export const useCourseStore = defineStore('courseStore', {
 
   actions: {
     async loadCourses(): Promise<void> {
-      const response = await axios.get('http://localhost:3000/courses.json');
-
-      const normalCourses = response.data.map((course: any) => {
+      // Use courseData directly instead of making an axios call
+      const normalCourses = courseData.map((course: any) => {
         const existingCourse = this.courses.find((c) => c.id === course.course + 'Normal');
         return {
           id: course.course + 'Normal',
@@ -31,7 +30,7 @@ export const useCourseStore = defineStore('courseStore', {
         };
       });
 
-      const hardCourses = response.data.map((course: any) => {
+      const hardCourses = courseData.map((course: any) => {
         const existingCourse = this.courses.find((c) => c.id === course.course + 'Hard');
         return {
           id: course.course + 'Hard',
