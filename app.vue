@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <component :is="currentComponent" />
+  <div class="bg-gray-700 h-screen">
+    <transition name="fade" mode="out-in">
+      <component :is="currentComponent" />
+    </transition>
   </div>
 </template>
 
@@ -40,15 +42,19 @@ const navigateTo = (component: keyof typeof componentMap) => {
 // Only load courses if the state is empty
 onMounted(async () => {
   if (courses.courses.length === 0) {
-    console.log('no courses, loading them thangs');
     await courses.loadCourses();
   }
 });
-
 </script>
 
 <style>
-body {
-  background-color: #3d3d3d;
+/* Fade transition styles */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

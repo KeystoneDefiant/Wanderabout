@@ -42,21 +42,19 @@ const closePane = () => {
 
 #textData {
   position: absolute;
-  top: 10%;
-  width: 90%;
-  height: 100%;
+  width: 110%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: top;
+  justify-content: center;
+  transform: translateY(-10%);
+  box-shadow: black 0px 0px 30px;
+  background-color: rgba(150, 150, 150, .5);
 }
 
 p {
-  background-color: rgba(0, 0, 0, .6);
-  border-radius: 3rem;
-  padding: 2%;
+  padding: 1% 3%;
   line-height: 100%;
-  position: relative;
   text-align: center;
 }
 
@@ -64,13 +62,11 @@ p {
   font-size: 420%;
   color: white;
   text-shadow: 0px 0px 10px black;
-  transform: translateY(0%) rotate(-8deg) ;
 }
 .difficulty {
   font-size: 200%;
   color: white;
   text-shadow: 0px 0px 10px black;
-  transform: translateY(-10%) translateX(170%) rotate(8deg);
 }
 
 </style>
