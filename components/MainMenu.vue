@@ -70,7 +70,6 @@ const getCourse = (difficulty?: string) => {
   if (courses.length > 0) {
     const randomCourse = courses[Math.floor(Math.random() * courses.length)];
     courseStore.toggleCourse(randomCourse.id, false);
-    console.log(`Random ${difficulty} Course:`, randomCourse);
     stateStore.setSelectedCourse(randomCourse);
     stateStore.setCurrentView('SelectedCourse');
   } else {

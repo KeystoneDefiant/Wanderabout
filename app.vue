@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <SelectedCourse /> -->
     <component :is="currentComponent" />
   </div>
 </template>
