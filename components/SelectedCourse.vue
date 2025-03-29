@@ -1,7 +1,7 @@
 <template>
     <div
       id="selectedCourse"
-      :style="{ backgroundImage: `url(/courses/${selectedCourse.course}.png)` }"
+      :style="{ backgroundImage: `url(./courses/${selectedCourse.course}.png)` }"
       @click="closePane"
     >
       <div id="textData">
