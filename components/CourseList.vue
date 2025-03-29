@@ -71,7 +71,6 @@ const stateStore = useStateStore();
 const toggleCourse = (course?: Course) => {
   if (course) {
     courseStore.toggleCourse(course.id, !course.enabled);
-    console.log(courseStore.getCourseById(course.id));
   }
 };
 
@@ -95,10 +94,6 @@ const closePane = () => {
   stateStore.setCurrentView("MainMenu");
 };
 
-onMounted(() => {
-  console.log('CourseList mounted');
-  console.log(courseStore.getGroupedByFriendlyName);
-});
 </script>
 
 <style scoped>

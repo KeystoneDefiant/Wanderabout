@@ -3,7 +3,7 @@ import {type Course } from '@/stores/courseStore';
 
 export const useStateStore = defineStore('stateStore', {
   state: () => ({
-    currentView: 'MainMenu',
+    currentView: 'Loading',
     selectedCourse: null as Course | null,
    }),
   actions: {
@@ -12,7 +12,6 @@ export const useStateStore = defineStore('stateStore', {
     },
     setSelectedCourse(course: Course): void {
       this.selectedCourse = course
-      console.log(this.selectedCourse)
     },
     clearSelectedCourse(): void {
       this.selectedCourse = null

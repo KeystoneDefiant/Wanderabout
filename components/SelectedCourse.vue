@@ -17,7 +17,6 @@ const stateStore = useStateStore();
 const selectedCourse = stateStore.getSelectedCourse;
 
 const closePane = () => {
-  console.log('Close button clicked');
   stateStore.setCurrentView("MainMenu");
 };
 

@@ -9,6 +9,7 @@ import { computed, onMounted } from 'vue';
 import CourseList from './components/CourseList.vue';
 import SelectedCourse from './components/SelectedCourse.vue';
 import MainMenu from './components/MainMenu.vue';
+import Loading from './components/Loading.vue';
 import { useCourseStore } from '@/stores/courseStore';
 import { useStateStore } from '@/stores/stateStore';
 
@@ -17,13 +18,14 @@ const stateStore = useStateStore();
 
 // Map state to components
 const componentMap = {
+  Loading,
   MainMenu,
   CourseList,
   SelectedCourse,
 };
 
 // Computed property to get the current component
-const currentComponent = computed(() => componentMap[stateStore.getCurrentView] || MainMenu);
+const currentComponent = computed(() => componentMap[stateStore.getCurrentView] || Loading);
 
 // Function to navigate to a new component
 const navigateTo = (component: keyof typeof componentMap) => {
