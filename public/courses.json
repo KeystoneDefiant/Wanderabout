@@ -126,5 +126,9 @@
     {
         "course": "WidowsWalkabout",
         "friendlyName": "Widows Walkabout"
+    },
+    {
+        "course": "RaptorCliffs",
+        "friendlyName": "Raptor Cliffs"
     }
 ]
