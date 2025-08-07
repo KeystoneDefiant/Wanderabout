@@ -130,5 +130,13 @@
     {
         "course": "RaptorCliffs",
         "friendlyName": "Raptor Cliffs"
+    },
+    {
+        "course": "CrystalLair",
+        "friendlyName": "Crystal Lair"
+    },
+    {
+        "course": "PassportTokyo",
+        "friendlyName": "Passport Tokyo"
     }
 ]
